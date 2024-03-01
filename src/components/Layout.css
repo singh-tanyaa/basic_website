@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+  .active-link {
+    background-color: #1d4ed8;
+  }
+  .logo {
+    width: auto;
+    height: 80px; /* Adjust the height as needed */
+  }
+  .layout header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0f172a;
+    color: white;
+    position: sticky;
+    top: 0;
+  }
+
+  .layout header nav .title {
+    font-size: 1.5rem;
+    margin: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+  }
+
+  .layout header nav ul {
+    display: flex;
+  }
+
+  .layout header nav ul li {
+    list-style: none;
+  }
+
+  .layout header nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+  }
+
+  .layout header nav ul li a:not(.active-link):hover {
+    background-color: #172554;
+  }
+
+  .layout header nav .menu {
+    display: none;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2rem;
+  }
+
+  .layout header nav .menu span {
+    height: 0.4rem;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0.2rem;
+  }
+
+  @media (max-width: 480px) {
+    .layout header nav .menu {
+      display: flex;
+    }
+
+    .layout header nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .layout header nav ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 0.25rem;
+    }
+
+    .layout header nav ul.open {
+      display: flex;
+    }
+
+    .layout header nav ul li {
+      width: 100%;
+      text-align: center;
+    }
+
+    .layout header nav ul li a {
+      margin: 0.2rem 0.5rem;
+    }
+  }
